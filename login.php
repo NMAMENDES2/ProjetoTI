@@ -1,3 +1,39 @@
+<?php 
+session_start();
+if(isset($_POST['username']) && isset($_POST['password'])){
+    if($_POST['username'] == 'aluno'){
+        $ficheiro = fopen("aluno.txt", 'r') or die ("Erro");
+        $pass_hash = trim(fgets($ficheiro));
+        fclose($ficheiro);
+        if($_POST['password'] == $pass_hash){
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            header('refresh: 0; url = dashboardAluno.php');
+        }
+    }
+    elseif($_POST['username'] == 'funcionario'){
+        $ficheiro = fopen("funcionario.txt", 'r') or die ("Erro");
+        $pass_hash = trim(fgets($ficheiro));
+        fclose($ficheiro);
+        if($_POST['password'] == $pass_hash){
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            header('refresh: 0; url = dashboardFuncionario.php');
+        }
+    }
+    elseif($_POST['username'] == 'diretor'){
+        $ficheiro = fopen("diretor.txt", 'r') or die ("Erro");
+        $pass_hash = trim(fgets($ficheiro));
+        fclose($ficheiro);
+        if($_POST['password'] == $pass_hash){
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['password'] = $_POST['password'];
+            header('refresh: 0; url = dashboardDiretor.php');
+        }
+    }
+}
+?>
+
 <!doctype html>
 <html lang="pt">
   <head>
@@ -12,11 +48,13 @@
     <div class="container vh-100 d-flex justify-content-center align-items-center">
         <div class="row">
             <div class="col">
+              <form action="" method="post">
                 <label for="username">Utilizador</label>
-                <input type="username" class="form-control" placeholder="Nome de utilizador">
+                <input type="text" class="form-control" placeholder="Nome de utilizador" name="username">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" name="password">
                 <button class="btn">Submit</button>
+                </form>
             </div>
         </div>
         </div>
