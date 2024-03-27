@@ -20,22 +20,27 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
     <link rel="stylesheet" href="dashboardAluno.css">
 
     <head>
+
     <body>
-        <nav class="navbar bg-light d-flex">
-            <a href="#" class="navbar-brand">ESTG 2.0</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#">Dashboard</a>
-                </li>
-            </ul>
-        </div>
+        <nav class="navbar bg-light navbar-expand-sm">
+            <div class="container-fluid justify-content-between d-flex align-items-center">
+                <a href="#" class="navbar-brand">ESTG 2.0</a>
+                <div class="d-flex justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Histórico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Social</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary"><a href="logout.php" class="nav-link">Logout</a></button>
+            </div>
         </nav>
-
-
         <div class="container">
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
