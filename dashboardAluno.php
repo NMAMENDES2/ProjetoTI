@@ -37,11 +37,34 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                             <a href="#" class="nav-link">Social</a>
                         </li>
                     </ul>
-                </div>
+              </div>
                 <button class="btn btn-sm btn-outline-secondary"><a href="logout.php" class="nav-link">Logout</a></button>
             </div>
         </nav>
         <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5 class="card-title">Temperatura</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h5 class="card-title">Social</h5>
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center" style="height: 300px; overflow: auto" id="scroll">
+                            <img src="https://avatars0.githubusercontent.com/u/9892522?v=4&s=400" alt="Teste" style="height: 100%; width: 100%">
+                            <p class="card-text" style="width:100%; height:auto; display:none" id="segundaImagem">Teste2</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-sm btn-outline-secondary" style="margin-left: 300px;" id="scrollButton">Seguinte</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="dashboardAluno.js"></script>

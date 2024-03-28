@@ -22,17 +22,15 @@ body {   /* Cria um linear gradient com 4 cores e a 45 graus ----- Define a anim
 	}
 }
 
-.container{
-	position: relative;
-	width: 250px;
-	height: 320px;
-}
-
 .card{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transform-style: preserve-3d;
-	transition: all 0.5s ease;
+	margin-top: 35px;
 }
 
+.container{
+	height: 80vh;
+	overflow-y: auto;
+}
+
+.card-body{
+	height: 300px;
+}

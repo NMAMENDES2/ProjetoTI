@@ -1,10 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const cardInner = document.querySelector('.card-inner');
-    const rotateBtn = document.querySelector('.rotate-btn');
-    let rotated = false;
+const scrollButton = document.getElementById('scrollButton');
+const segundaImagem = document.getElementById('segundaImagem');
 
-    rotateBtn.addEventListener('click', function() {
-        cardInner.style.transform = rotated ? 'rotateY(0deg)' : 'rotateY(180deg)';
-        rotated = !rotated;
-    });
-});
+console.log(scrollButton);
+
+scrollButton.addEventListener('click', function(){
+    segundaImagem.style.display = 'block';
+})
