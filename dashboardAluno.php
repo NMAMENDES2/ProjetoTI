@@ -6,6 +6,8 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
     header("refresh: 5; url=login.php");
     die("Acesso restrito");
 }
+
+$valor_temperatura = file_get_contents("api/files/temperatura/valor.txt");
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +49,11 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                     <div class="card text-center">
                         <div class="card-header">
                             <h5 class="card-title">Temperatura</h5>
+                        </div>
+                        <div class="card-body">
+                            <?php
+                                echo("<p>". $valor_temperatura. "</p>");
+                            ?>
                         </div>
                     </div>
                 </div>
